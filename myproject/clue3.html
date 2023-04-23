@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cryptic Riddle</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+
+		}
+		h1 {
+			text-align: center;
+			font-size: 2.5em;
+			margin-top: 50px;
+                  color:red
+		}
+		p {
+			font-size: 1.2em;
+			line-height: 1.6em;
+			margin: 30px 50px;
+			text-align: center;
+		}
+		input[type=text] {
+			display: block;
+			margin: 30px auto;
+			padding: 10px;
+			font-size: 1.2em;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px #999;
+			text-align: center;
+		}
+		button {
+			display: block;
+			margin: 30px auto;
+			padding: 10px 30px;
+			font-size: 1.2em;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: #333;
+			cursor: pointer;
+			box-shadow: 0 0 5px #999;
+		}
+	</style>
+</head>
+        <div>
+<label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+<style>
+#seconds {
+  font-size: 3em;
+  color:#4CAF50;
+  }
+
+#minutes {
+  font-size: 3em;
+   color:#4CAF50;
+}
+#colon {
+  font-size: 3em;
+   color:#4CAF50;
+}
+</style>
+<script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+
+
+</div>
+      <H1> Appreciated!!, Here is your 3rd clue to get closure to your treasure</H1>
+	<p>Decode the riddle below to reveal the location of the next clue:</p>
+	<p>I come once in a year,<br>
+	Twice in a month,<br>
+                  Four times in a week,<br>
+                  Six times in a day,<br>
+	What am I?</p>
+	<input type="text" id="answer" placeholder="Enter your answer here">
+	<button onclick="checkAnswer()">Submit</button>
+
+	<script>
+		function checkAnswer() {
+			var answer = document.getElementById("answer").value;
+			if (answer.toLowerCase() === "odd number") {
+				alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
+				// replace the url with the actual location of the next clue
+				window.location.href = "file:///C:/Users/hp/Desktop/clue4.html";
+			} else {
+				alert("Sorry, that's not the correct answer. Please try again.");
+                                                                        window.location.href = "file:///C:/Users/hp/Desktop/dead.html";
+
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<style>
+		body {
+			background-color:#f2f2f2;
+                                             }
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+	<script>
+		function redirectRegister() {
+			window.location.replace("register.html");
+		}
+		
+		function redirectLogin() {
+			window.location.replace("login.html");
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to our website</h1>
+		<button type="button" class="btn" onclick="redirectRegister()">Register</button>
+		<button type="button" class="btn" onclick="redirectLogin()">Login</button>
+	</div>
+</body>
+</html>
